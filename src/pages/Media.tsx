@@ -149,7 +149,7 @@ const Media = () => {
           <div className="mt-16">
             <h3 className="text-xl font-heading font-semibold text-foreground text-center mb-8">Approved Headshots</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-              {[heroImage, heroImage, heroImage, heroImage].map((img, i) => (
+              {[headshot, heroImage, romanEvent2, romanWithBook].map((img, i) => (
                 <div key={i} className="card-elevated overflow-hidden rounded-xl aspect-[3/4]">
                   <img
                     src={img}
