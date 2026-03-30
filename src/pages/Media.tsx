@@ -5,6 +5,10 @@ import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
 import stageImage from "@/assets/stage-keynote.jpg";
 import heroImage from "@/assets/hero-portrait.jpg";
+import romanWithBook from "@/assets/roman-with-book.png";
+import romanEvent1 from "@/assets/roman-event-1.jpg";
+import romanEvent2 from "@/assets/roman-event-2.jpg";
+import headshot from "@/assets/headshot-professional.jpg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
