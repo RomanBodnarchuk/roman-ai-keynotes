@@ -34,7 +34,7 @@ const About = () => {
                   His career spans decades of building, scaling, and advising companies across real estate, technology, media, and professional services. He has worked with thousands of business leaders and generated hundreds of millions of dollars in revenue for the companies he has founded and advised.
                 </p>
                 <p>
-                  Roman is the author of three books: The Million Dollar Minute, Clone Your Mind With AI, and Buy Back Your Time With AI. Each book distills his experience into frameworks that leaders can apply immediately to drive measurable outcomes.
+                  Roman is the author of four books and a sought-after voice in the AI transformation space. Each book distills his experience into frameworks that leaders can apply immediately to drive measurable outcomes.
                 </p>
               </div>
             </motion.div>
