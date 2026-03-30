@@ -5,6 +5,10 @@ import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
 import stageImage from "@/assets/stage-keynote.jpg";
 import heroImage from "@/assets/hero-portrait.jpg";
+import romanWithBook from "@/assets/roman-with-book.png";
+import romanEvent1 from "@/assets/roman-event-1.jpg";
+import romanEvent2 from "@/assets/roman-event-2.jpg";
+import headshot from "@/assets/headshot-professional.jpg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -85,7 +89,7 @@ const Media = () => {
             title="Stage and Event Photography"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[stageImage, heroImage, stageImage].map((img, i) => (
+            {[stageImage, romanWithBook, romanEvent1].map((img, i) => (
               <motion.div
                 key={i}
                 {...fadeIn}
@@ -145,7 +149,7 @@ const Media = () => {
           <div className="mt-16">
             <h3 className="text-xl font-heading font-semibold text-foreground text-center mb-8">Approved Headshots</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-              {[heroImage, heroImage, heroImage, heroImage].map((img, i) => (
+              {[headshot, heroImage, romanEvent2, romanWithBook].map((img, i) => (
                 <div key={i} className="card-elevated overflow-hidden rounded-xl aspect-[3/4]">
                   <img
                     src={img}
