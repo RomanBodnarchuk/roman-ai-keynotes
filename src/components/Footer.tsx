@@ -12,7 +12,7 @@ const Footer = () => {
               Roman Bodnarchuk
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              AI Keynote Speaker. Entrepreneur. Strategist. Helping companies transition from AI experimentation to AI-first execution.
+              AI Keynote Speaker. Founder. Operator. Helping companies transition from AI experimentation to AI-first execution.
             </p>
             <Link to="/contact" className="btn-primary !py-2.5 !px-6 !text-xs">
               Book Now
@@ -31,6 +31,7 @@ const Footer = () => {
                 { label: "Books", path: "/books" },
                 { label: "Media Kit", path: "/media" },
                 { label: "Event Organizers", path: "/event-organizers" },
+                { label: "Resources", path: "/resources" },
                 { label: "Contact", path: "/contact" },
               ].map((link) => (
                 <Link
@@ -51,10 +52,11 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col gap-3">
               {[
-                { label: "WisdomClone.ai", href: "#" },
-                { label: "N5R.ai", href: "#" },
-                { label: "10XAI.news", href: "#" },
+                { label: "WisdomClone.ai", href: "https://wisdomclone.ai" },
+                { label: "N5R.ai", href: "https://n5r.ai" },
+                { label: "10XAI.news", href: "https://10xainews.com" },
                 { label: "The Best Half Show", href: "#" },
+                { label: "Strategic AI Coach", href: "https://strategicaicoach.com" },
               ].map((link) => (
                 <a
                   key={link.label}
@@ -76,14 +78,16 @@ const Footer = () => {
             </h4>
             <div className="flex gap-4 mb-6">
               {[
-                { icon: Linkedin, label: "LinkedIn" },
-                { icon: Twitter, label: "X" },
-                { icon: Youtube, label: "YouTube" },
-                { icon: Instagram, label: "Instagram" },
-              ].map(({ icon: Icon, label }) => (
+                { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/romanbodnarchuk" },
+                { icon: Twitter, label: "X", href: "#" },
+                { icon: Youtube, label: "YouTube", href: "#" },
+                { icon: Instagram, label: "Instagram", href: "#" },
+              ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-muted transition-all"
                 >
@@ -91,20 +95,19 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <Link to="/resources" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Download Resources
-            </Link>
+            <p className="text-sm text-muted-foreground mb-2">roman@n5r.com</p>
+            <p className="text-xs text-text-tertiary">Toronto, Ontario, Canada</p>
           </div>
         </div>
 
-        <div className="glow-line mt-12 mb-8 opacity-30" />
+        <div className="glow-line mt-12 mb-8 opacity-20" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-tertiary">
             &copy; {new Date().getFullYear()} Roman Bodnarchuk. All rights reserved.
           </p>
           <p className="text-xs text-text-tertiary">
-            AI Keynote Speaker &middot; Executive Advisor &middot; Author
+            AI Keynote Speaker &middot; Founder &middot; Author &middot; Operator
           </p>
         </div>
       </div>
