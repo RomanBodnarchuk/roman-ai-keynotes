@@ -9,6 +9,7 @@ const topics = [
     title: "Clone Your Mind",
     promise: "Learn how to build AI agents that replicate your best thinking, decision-making, and expertise at scale.",
     audience: "CEOs, founders, and senior leaders who want to multiply their impact without multiplying their hours.",
+    bestFor: "Executive summits, founder retreats, CEO peer groups",
     takeaways: [
       "How to identify and codify your most valuable knowledge into AI systems",
       "The framework for building AI agents that think and respond like you",
@@ -21,6 +22,7 @@ const topics = [
     title: "Buy Back Your Time With AI",
     promise: "Eliminate low-value tasks, reclaim executive bandwidth, and redirect your focus to the work that drives the most value.",
     audience: "Executives and high-performing professionals drowning in operational tasks who want to 10x their leverage.",
+    bestFor: "Leadership conferences, productivity summits, corporate offsites",
     takeaways: [
       "How to audit your calendar and identify tasks AI can handle today",
       "The delegation matrix: what to automate, what to delegate to AI agents, and what to keep",
@@ -33,6 +35,7 @@ const topics = [
     title: "The Organizational Singularity",
     promise: "What happens when AI can perform every back-office function in your company, and how to prepare your organization for that moment.",
     audience: "C-suite leaders, board members, and strategy executives responsible for long-term organizational design.",
+    bestFor: "Board retreats, strategy offsites, C-suite planning sessions",
     takeaways: [
       "The timeline for AI replacing operational functions across industries",
       "How to redesign your organizational structure around AI capabilities",
@@ -45,6 +48,7 @@ const topics = [
     title: "AI-Native vs AI-Assisted",
     promise: "Why companies built around AI from the ground up will outperform those simply bolting AI tools onto legacy processes.",
     audience: "Innovation leaders, CTOs, and CEOs evaluating their company's AI strategy and competitive positioning.",
+    bestFor: "Technology conferences, innovation summits, CTO forums",
     takeaways: [
       "The critical difference between AI-assisted workflows and AI-native architecture",
       "Why incremental AI adoption creates a false sense of progress",
@@ -57,6 +61,7 @@ const topics = [
     title: "Your Company Without Employees",
     promise: "Explore the future of the fully AI-powered enterprise and what it means for growth, profitability, and leadership.",
     audience: "Private equity leaders, portfolio company CEOs, and growth-stage founders optimizing for scale and efficiency.",
+    bestFor: "Private equity events, growth-stage founder summits, PE portfolio days",
     takeaways: [
       "How AI agents are replacing entire departments in forward-thinking companies",
       "The financial model of a company with AI-powered labor",
@@ -69,6 +74,7 @@ const topics = [
     title: "The Back Office Revolution",
     promise: "How AI is eliminating the traditional back office and creating opportunities for radical operational efficiency.",
     audience: "COOs, CFOs, and operational leaders responsible for scaling business infrastructure.",
+    bestFor: "Operations conferences, CFO summits, enterprise transformation events",
     takeaways: [
       "Which back-office functions are most ready for AI automation today",
       "The cost savings and speed improvements achievable within 12 months",
@@ -81,6 +87,7 @@ const topics = [
     title: "Infinite Scale Without Hiring",
     promise: "How to grow revenue, output, and market presence without proportionally growing headcount.",
     audience: "Sales leaders, growth executives, and founders seeking scalable, capital-efficient growth strategies.",
+    bestFor: "Sales kickoffs, revenue leadership events, SaaS conferences",
     takeaways: [
       "The AI-powered sales and marketing stack that scales without new hires",
       "How to deploy digital workers across lead generation, outreach, and customer success",
@@ -114,16 +121,22 @@ const SpeakingTopics = () => {
               >
                 <div className="flex flex-col lg:flex-row lg:gap-12">
                   <div className="lg:w-2/5 mb-6 lg:mb-0">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-3 block">
+                      Keynote {i + 1}
+                    </span>
                     <h3 className="text-2xl font-heading font-bold text-foreground mb-3">
                       {topic.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       {topic.promise}
                     </p>
-                    <div className="flex items-start gap-2 text-sm">
+                    <div className="flex items-start gap-2 text-sm mb-3">
                       <Users size={16} className="text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{topic.audience}</span>
                     </div>
+                    <p className="text-xs text-text-tertiary">
+                      Best for: {topic.bestFor}
+                    </p>
                   </div>
                   <div className="lg:w-3/5 lg:border-l lg:border-border lg:pl-12">
                     <h4 className="text-xs font-semibold uppercase tracking-[0.15em] text-primary mb-4">
@@ -152,6 +165,19 @@ const SpeakingTopics = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Roman Bodnarchuk Keynote Topics",
+        itemListElement: topics.map((t, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: t.title,
+          description: t.promise,
+        })),
+      })}} />
     </PageLayout>
   );
 };

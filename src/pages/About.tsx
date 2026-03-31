@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
@@ -19,22 +19,26 @@ const About = () => {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div {...fadeIn}>
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-6 block">About Roman</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6 block">About Roman</span>
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight mb-6">
-                Entrepreneur. AI Strategist. Keynote Speaker.
+                Entrepreneur. Operator.{" "}
+                <span className="text-gradient">AI-Native Builder.</span>
               </h1>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Roman Bodnarchuk is a globally recognized entrepreneur, AI strategist, and keynote speaker who helps companies transition from AI experimentation to AI-first execution.
                 </p>
                 <p>
-                  As the founder of WisdomClone.ai, CEO of N5R.ai, publisher of 10XAI.news, and co-host of The Best Half Show Podcast, Roman operates at the intersection of artificial intelligence, business strategy, and organizational transformation.
+                  As the founder of WisdomClone.ai, CEO of N5R.ai, publisher of 10XAI.news, and co-host of The Best Half Show with Mark Organ (founder of Eloqua, sold to Oracle for $871M), Roman operates at the intersection of artificial intelligence, business strategy, and organizational transformation.
                 </p>
                 <p>
-                  His career spans decades of building, scaling, and advising companies across real estate, technology, media, and professional services. He has worked with thousands of business leaders and generated hundreds of millions of dollars in revenue for the companies he has founded and advised.
+                  His career spans 27 years of building, scaling, and advising companies across real estate, technology, media, and professional services. He founded N5R.com in 1998, served as Procter & Gamble's digital agency of record for six years, and has operated across 15 countries on 5 continents. He has helped five companies reach $1 billion in revenue or valuation.
                 </p>
                 <p>
-                  Roman is the author of four books and a sought-after voice in the AI transformation space. Each book distills his experience into frameworks that leaders can apply immediately to drive measurable outcomes.
+                  Today, Roman operates an entirely AI-native organization with zero human employees. Every function below the founder level is owned by AI agents. His keynotes draw from this firsthand experience, not theory.
+                </p>
+                <p>
+                  Roman is the author of four books including The Million Dollar Minute, Clone Your Mind With AI, and Buy Back Your Time With AI. Each book distills his experience into frameworks that leaders can apply immediately.
                 </p>
               </div>
             </motion.div>
@@ -58,19 +62,38 @@ const About = () => {
         </div>
       </section>
 
+      {/* Stats */}
+      <section className="section-padding-sm bg-card/30">
+        <div className="section-container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "27+", label: "Years in Digital Marketing" },
+              { number: "5", label: "Companies to $1B+" },
+              { number: "15", label: "Countries, 5 Continents" },
+              { number: "0", label: "Human Employees (All AI)" },
+            ].map((stat, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
+                <div className="stat-number">{stat.number}</div>
+                <div className="stat-label">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* What Makes Roman Different */}
-      <section className="section-padding bg-card/30">
+      <section className="section-padding">
         <div className="section-container">
           <SectionHeading
             label="Differentiation"
             title="What Makes His Perspective Different"
-            description="Roman is not an AI theorist. He is an operator who builds and scales AI companies. Every insight he shares is tested in the market, not just discussed in a boardroom."
+            description="Roman is not an AI theorist or commentator. He is an operator who builds and scales AI-native companies. Every insight he shares is tested in the market, not just discussed in a boardroom."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { title: "Builder, Not Just Speaker", desc: "Roman runs multiple AI companies. He builds, deploys, and monetizes AI systems in real businesses every day. His keynotes are grounded in firsthand operational experience." },
-              { title: "Strategic, Not Technical", desc: "He translates AI complexity into strategic clarity. His audiences do not need a computer science degree. They need to know what AI means for their business, their team, and their competitive position." },
-              { title: "Proven Revenue Generator", desc: "Roman has generated hundreds of millions in revenue across his career. He understands growth, sales, leadership, and operations at scale. AI is the lens, but business performance is the outcome." },
+              { title: "Operator, Not Commentator", desc: "Roman runs multiple AI-native companies with zero human employees. He builds, deploys, and monetizes AI agents every day. His keynotes come from firsthand operational experience." },
+              { title: "Strategic, Not Technical", desc: "He translates AI complexity into strategic clarity. Audiences do not need a computer science degree. They need to know what AI means for their business, their team, and their competitive position." },
+              { title: "Proven at Scale", desc: "27 years of building companies. Five taken to $1 billion. Procter & Gamble agency of record. Operated across 15 countries. This is not a first-time speaker testing ideas on your stage." },
               { title: "Trusted by Premium Audiences", desc: "Roman is regularly invited to speak at CEO peer groups, enterprise leadership summits, and private equity events. The audiences that book him expect substance, not spectacle." },
             ].map((item, i) => (
               <motion.div
@@ -89,34 +112,29 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Organizers Book Him */}
-      <section className="section-padding">
-        <div className="section-container max-w-3xl">
-          <SectionHeading
-            label="For Event Organizers"
-            title="Why Organizers Book Roman"
-          />
-          <motion.div {...fadeIn} className="space-y-6">
-            {[
-              "Delivers immediately actionable frameworks, not abstract AI philosophy.",
-              "Speaks the language of CEOs, founders, and executive teams.",
-              "Customizes every keynote to the specific audience, industry, and event goals.",
-              "Professional, reliable, and easy to work with from inquiry to stage.",
-              "Backed by a portfolio of companies, books, and media that reinforce credibility.",
-              "Leaves audiences with a clear understanding of what to do next with AI.",
-            ].map((point, i) => (
-              <div key={i} className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <p className="text-muted-foreground leading-relaxed">{point}</p>
-              </div>
-            ))}
+      {/* CTA */}
+      <section className="section-padding bg-card/30">
+        <div className="section-container text-center">
+          <motion.div {...fadeIn}>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6 block">
+              Ready to Book?
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+              Bring Roman to Your Next Event
+            </h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+              Available for keynotes, executive workshops, private advisory sessions, and podcast appearances across North America.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="btn-primary">
+                Book Roman for Your Event
+                <ArrowRight className="ml-2" size={16} />
+              </Link>
+              <Link to="/speaking-topics" className="btn-secondary">
+                View Keynote Topics
+              </Link>
+            </div>
           </motion.div>
-          <div className="mt-12 text-center">
-            <Link to="/contact" className="btn-primary">
-              Book Roman for Your Event
-              <ArrowRight className="ml-2" size={16} />
-            </Link>
-          </div>
         </div>
       </section>
     </PageLayout>
