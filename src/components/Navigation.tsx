@@ -1,16 +1,14 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
-  { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "Speaking Topics", path: "/speaking-topics" },
+  { label: "Topics", path: "/speaking-topics" },
+  { label: "Formats", path: "/event-organizers" },
   { label: "Books", path: "/books" },
   { label: "Media", path: "/media" },
-  { label: "Event Organizers", path: "/event-organizers" },
-  { label: "Contact", path: "/contact" },
 ];
 
 const Navigation = () => {
@@ -18,28 +16,28 @@ const Navigation = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
-      <div className="section-container flex items-center justify-between h-16 lg:h-20">
-        <Link to="/" className="font-heading text-lg font-semibold tracking-tight text-foreground">
-          Roman Bodnarchuk
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-2xl border-b border-border">
+      <div className="flex items-center justify-between px-7 sm:px-12 h-[68px]">
+        <Link to="/" className="font-heading text-[22px] tracking-[3px] text-foreground">
+          ROMAN <span className="text-primary">BODNARCHUK</span>
         </Link>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.slice(1, -1).map((link) => (
+        <div className="hidden lg:flex items-center gap-9">
+          {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`text-sm font-medium transition-colors duration-200 ${
+              className={`text-[13px] uppercase tracking-[1.5px] transition-colors duration-200 ${
                 location.pathname === link.path
-                  ? "text-primary"
+                  ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <Link to="/contact" className="btn-primary !py-2.5 !px-6 !text-xs">
+          <Link to="/contact" className="bg-primary text-white px-6 py-2.5 text-[12px] uppercase tracking-[1.5px] font-medium hover:bg-primary/80 transition-colors">
             Book Roman
           </Link>
         </div>
@@ -63,15 +61,15 @@ const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
-            <div className="section-container py-6 flex flex-col gap-4">
+            <div className="px-7 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium transition-colors ${
+                  className={`text-base uppercase tracking-[1.5px] transition-colors ${
                     location.pathname === link.path
-                      ? "text-primary"
+                      ? "text-foreground"
                       : "text-muted-foreground"
                   }`}
                 >
