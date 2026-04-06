@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ["'Bebas Neue'", "'Space Grotesk'", "system-ui", "sans-serif"],
+        body: ["'DM Sans'", "'Inter'", "system-ui", "sans-serif"],
+        serif: ["'DM Serif Display'", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,6 +52,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        gold: "hsl(var(--gold))",
         surface: {
           elevated: "hsl(var(--surface-elevated))",
         },
