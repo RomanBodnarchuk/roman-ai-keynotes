@@ -6,7 +6,7 @@ const PageLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-16 lg:pt-20">{children}</main>
+      <main className="pt-[68px]">{children}</main>
       <Footer />
     </div>
   );
