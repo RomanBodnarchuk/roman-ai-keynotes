@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Formats", path: "/event-organizers" },
   { label: "Books", path: "/books" },
   { label: "Media", path: "/media" },
+  { label: "Tools", path: "/tools" },
 ];
 
 const Navigation = () => {
