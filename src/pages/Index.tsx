@@ -319,12 +319,15 @@ const Index = () => {
               Book Roman<br />For Your Next Event
             </h2>
             <p className="text-[17px] leading-[1.7] text-[#aaa] max-w-[600px] mx-auto mb-12 font-light">
-              Keynotes. Workshops. Executive Advisory.<br />
+              Keynotes. Workshops. Executive Advisory. Founding Cohort.<br />
               All engagements book 6 to 8 weeks in advance. Availability is limited.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact" className="btn-primary">
                 Inquire About Availability
+              </Link>
+              <Link to="/cohort" className="btn-secondary">
+                Join the Founding Cohort
               </Link>
               <a href="#speaker-reel" className="btn-secondary">
                 Watch the Podcast
