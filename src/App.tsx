@@ -39,6 +39,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/tools" element={<Tools />} />
+          <Route path="/cohort" element={<Cohort />} />
           <Route path="/tools/ai-readiness-score" element={<AIReadinessScore />} />
           <Route path="/tools/clone-roi-calculator" element={<CloneROICalculator />} />
           <Route path="/tools/hubspot-ai-audit" element={<HubSpotAudit />} />
