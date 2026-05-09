@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { usePageSEO } from "@/hooks/use-page-seo";
 
 const fadeUp = {
   initial: { opacity: 0, y: 28 },
