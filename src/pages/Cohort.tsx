@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { usePageSEO } from "@/hooks/use-page-seo";
 
 const fadeUp = {
   initial: { opacity: 0, y: 28 },
@@ -66,6 +67,12 @@ const Faq = ({ q, a }: { q: string; a: string }) => {
 };
 
 const Cohort = () => {
+  usePageSEO({
+    title: "N5R.ai Founding Cohort — 12-Agent AI Workforce by Roman Bodnarchuk",
+    description: "Join the N5R.ai Founding Cohort: a 12-month engagement where Roman Bodnarchuk builds a 12-agent AI workforce for your business. $8,000/month. Limited to 10 companies. $150K guarantee.",
+    canonical: "https://romanbodnarchuk.com/cohort",
+  });
+
   return (
     <PageLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
