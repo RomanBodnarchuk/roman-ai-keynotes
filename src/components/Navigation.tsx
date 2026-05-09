@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Books", path: "/books" },
   { label: "Media", path: "/media" },
   { label: "Tools", path: "/tools" },
+  { label: "Cohort", path: "/cohort" },
 ];
 
 const Navigation = () => {
