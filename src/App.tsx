@@ -12,6 +12,7 @@ import EventOrganizers from "./pages/EventOrganizers.tsx";
 import Contact from "./pages/Contact.tsx";
 import Resources from "./pages/Resources.tsx";
 import Tools from "./pages/Tools.tsx";
+import Cohort from "./pages/Cohort.tsx";
 import AIReadinessScore from "./pages/tools/AIReadinessScore.tsx";
 import CloneROICalculator from "./pages/tools/CloneROICalculator.tsx";
 import HubSpotAudit from "./pages/tools/HubSpotAudit.tsx";
