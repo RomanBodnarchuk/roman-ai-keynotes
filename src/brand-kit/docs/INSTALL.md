@@ -11,7 +11,7 @@ Drop the entire `brand-kit/` directory into `src/brand-kit/` of the target proje
 In your `src/index.css`, replace the `:root` block + `@layer base` typography + `@layer components` button utilities with:
 
 ```css
-@import "./brand-kit/tokens/index.css";
+/* copy contents of src/brand-kit/tokens/tokens.css.template into your index.css */
 ```
 
 (Or copy the contents inline if you prefer one file.)
