@@ -1,0 +1,23 @@
+{
+  "name": "@roman/brand-kit",
+  "version": "1.0.0",
+  "description": "Shared design system for Roman Bodnarchuk sister projects (WisdomClone.ai, N5R.ai, 10X AI News).",
+  "private": true,
+  "type": "module",
+  "main": "./components/index.ts",
+  "files": [
+    "components",
+    "tokens",
+    "docs",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.400.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": ["brand-kit", "design-system", "tailwind", "roman-bodnarchuk"]
+}
