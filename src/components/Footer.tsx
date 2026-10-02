@@ -10,10 +10,9 @@ const Footer = () => {
 
         <div className="flex flex-wrap gap-8 justify-center">
           {[
-            { label: "WisdomClone.ai", href: "https://wisdomclone.ai" },
-            { label: "N5R.ai", href: "https://n5r.ai" },
-            { label: "10X AI News", href: "https://10xainews.com" },
-            { label: "Podcast", href: "https://strategicaicoach.com" },
+            { label: "WisdomTwin.ai", href: "https://wisdomtwin.ai" },
+            { label: "N5R.ai Training", href: "https://www.n5r.ai/training" },
+            { label: "10XAI.news", href: "https://www.10xai.news" },
           ].map((link) => (
             <a
               key={link.label}
@@ -34,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div className="text-[12px] text-muted-foreground text-center md:text-right">
-          roman@n5r.com &nbsp;&middot;&nbsp; Toronto, Canada
+          N5R.com Inc.<br />99 Yorkville Avenue, Suite 200<br />Toronto, Ontario, Canada<br /><a href="mailto:roman@n5r.com" className="underline">roman@n5r.com</a>
         </div>
       </div>
     </footer>
