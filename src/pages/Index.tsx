@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import TrainingProviderInfo from "@/components/TrainingProviderInfo";
 import heroImage from "@/assets/hero-portrait.jpg";
 import stageImage from "@/assets/stage-keynote.jpg";
 
@@ -21,11 +22,11 @@ const Index = () => {
         "@type": "Person",
         name: "Roman Bodnarchuk",
         jobTitle: "AI Keynote Speaker & Executive Advisor",
-        description: "AI keynote speaker helping companies transition from AI experimentation to AI-first execution. Founder of WisdomClone.ai, CEO of N5R.ai, publisher of 10XAI.news.",
+        description: "AI keynote speaker helping companies transition from AI experimentation to AI-first execution. Founder of WisdomTwin.ai, CEO of N5R.ai, publisher of 10XAI.news.",
         url: "https://romanbodnarchuk.com",
         knowsAbout: ["Artificial Intelligence", "AI Strategy", "Digital Transformation", "Keynote Speaking", "AI Agents", "Digital Workers"],
         founder: [
-          { "@type": "Organization", name: "WisdomClone.ai" },
+          { "@type": "Organization", name: "WisdomTwin.ai" },
           { "@type": "Organization", name: "N5R.ai" },
         ],
         author: [
@@ -98,8 +99,8 @@ const Index = () => {
           }} />
           {/* Badge */}
           <div className="absolute bottom-10 right-10 bg-primary p-5 text-center border-l-[3px] border-gold">
-            <div className="font-heading text-[42px] leading-none text-white">27</div>
-            <div className="text-[10px] uppercase tracking-[2px] text-white/80 mt-1">Years of Digital<br />Marketing Mastery</div>
+            <div className="font-heading text-[42px] leading-none text-white">AI</div>
+            <div className="text-[10px] uppercase tracking-[2px] text-white/80 mt-1">Company Training<br />and Keynotes</div>
           </div>
         </div>
       </section>
@@ -112,11 +113,10 @@ const Index = () => {
         <span className="w-px h-8 bg-border mr-12 flex-shrink-0" />
         <div className="flex gap-12 items-center flex-wrap">
           {[
-            { name: "WISDOMCLONE", accent: ".AI" },
+            { name: "WISDOMTWIN", accent: ".AI" },
             { name: "N5R", accent: ".AI" },
             { name: "10XAI", accent: "NEWS" },
             { name: "THE BEST HALF ", accent: "SHOW" },
-            { name: "STRATEGIC AI ", accent: "COACH" },
           ].map((v) => (
             <span key={v.name} className="font-heading text-base tracking-[2px] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap cursor-default">
               {v.name}<span className="text-primary">{v.accent}</span>
@@ -125,20 +125,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* ═══════ STATS BAR ═══════ */}
-      <section className="bg-primary grid grid-cols-2 md:grid-cols-4">
-        {[
-          { num: "5", label: "Billion-Dollar\nCompanies Built" },
-          { num: "15", label: "Countries of\nOperation" },
-          { num: "27", label: "Years of Digital\nMarketing" },
-          { num: "4", label: "Books\nAuthored" },
-        ].map((s, i) => (
-          <div key={i} className="py-12 px-10 text-center border-r border-white/15 last:border-r-0">
-            <div className="font-heading text-[56px] leading-none text-white">{s.num}</div>
-            <div className="text-[11px] uppercase tracking-[2px] text-white/75 mt-2 whitespace-pre-line">{s.label}</div>
-          </div>
-        ))}
-      </section>
+      <TrainingProviderInfo />
 
       {/* ═══════ WHY ROMAN, WHY NOW ═══════ */}
       <section className="bg-card grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -150,17 +137,17 @@ const Index = () => {
             </h2>
             <div className="text-[17px] leading-[1.7] text-[#aaa] font-light max-w-[600px] space-y-4">
               <p>Most companies are experimenting with AI. Very few are executing. Roman works with organizations building AI-native operations where agents replace workflows, not just assist them.</p>
-              <p>He founded N5R.com in 1998, served as Procter & Gamble's digital agency of record for six years, and has helped five companies reach $1 billion in revenue or valuation. His current company, WisdomClone.ai, is building the infrastructure layer of the Wisdom Economy.</p>
+              <p>N5R.com Inc. was incorporated in 1998 and has provided AI training since 2017. Roman teaches company teams how to apply AI to their roles and existing software.</p>
               <p>Roman doesn't talk about AI theory. He runs zero human employees across a multi-company portfolio exclusively through AI agents. He is the case study.</p>
             </div>
           </motion.div>
         </div>
         <div className="grid grid-cols-2 gap-[2px]">
           {[
-            { num: "$1B+", title: "Revenue Generated", body: "Helped 5 companies reach $1B in revenue or valuation across 5 continents." },
-            { num: "0", title: "Human Employees", body: "Runs a multi-company portfolio exclusively through AI agents. The proof-of-concept is him." },
-            { num: "6yr", title: "P&G Agency of Record", body: "Six consecutive years as Procter & Gamble's digital agency of record." },
-            { num: "10X", title: "Your Company's ROI", body: "Every framework Roman deploys is built for 10x revenue impact, not incremental gains." },
+            { num: "AI", title: "Employee Skills", body: "Training tailored to employee roles, tasks, and existing software." },
+            { num: "N5R", title: "Company Training", body: "Training through N5R.com Inc., with a proposed course outline and itemized quote." },
+            { num: "TOOLS", title: "Practical Examples", body: "Exercises based on the software and processes the employer uses." },
+            { num: "ROLES", title: "Relevant Learning", body: "Discuss the skills each employee needs before choosing the course." },
           ].map((card) => (
             <motion.div
               key={card.num}
@@ -190,9 +177,9 @@ const Index = () => {
               { num: "01", title: "The AI-Native Company: Zero Employees, Infinite Scale", body: "How Roman runs a multi-company AI empire with zero human employees. The exact architecture, agent stack, and delegation framework your organization can replicate today.", tag: "Operations" },
               { num: "02", title: "The Wisdom Economy: Your Expertise Is the Moat", body: "The next trillion-dollar market isn't software. It's human intelligence, cloned and deployed at scale. Who owns your organization's intellectual capital when your top performers leave?", tag: "Strategy" },
               { num: "03", title: "AI Agents vs AI Tools: Why Most Companies Are Behind", body: "The companies using AI as a productivity tool will lose to those deploying AI as autonomous infrastructure. Roman shows the difference and the roadmap to catch up.", tag: "AI Strategy" },
-              { num: "04", title: "10X Revenue Without 10X Headcount", body: "The frameworks, agent workflows, and execution systems that allow any business to multiply output without multiplying costs. Built on 27 years and $1B+ in proven results.", tag: "Growth" },
+              { num: "04", title: "10X Revenue Without 10X Headcount", body: "The frameworks, agent workflows, and execution systems that allow any business to multiply output without multiplying costs. Explore practical workflows and the decisions needed to use them.", tag: "Growth" },
               { num: "05", title: "The AI Leadership Mandate: Lead the Change or Become Obsolete", body: "A direct conversation for CEOs and executives. What AI transformation actually requires from leaders, and why most corporate AI initiatives fail before they start.", tag: "Leadership" },
-              { num: "06", title: "From Digital Marketing to AI Marketing: The Complete Shift", body: "27 years of digital marketing, six years as P&G's agency of record, and a front-row seat at every major digital shift. The AI marketing transition is the biggest one yet.", tag: "Marketing" },
+              { num: "06", title: "From Digital Marketing to AI Marketing: The Complete Shift", body: "Practical discussion of how AI changes marketing tasks, review processes, and team skills.", tag: "Marketing" },
             ].map((topic) => (
               <motion.div
                 key={topic.num}
@@ -290,7 +277,6 @@ const Index = () => {
             {[
               { quote: "Roman doesn't theorize about AI. He's living it. Our team left with a completely different understanding of what's possible, and what we were leaving on the table.", author: "Mark Organ", role: "Founder, Eloqua (acquired by Oracle, $871M)" },
               { quote: "The clarity Roman brings to AI strategy is unmatched. He cuts through the noise faster than anyone I've seen at the executive level.", author: "Neil Simon", role: "Managing Director, Investor Cubed" },
-              { quote: "Roman's WisdomClone framework helped us identify AI leverage points we had completely overlooked. Concrete, actionable, and immediately valuable.", author: "Stella Cabrera", role: "Founder, CGlobal Group" },
             ].map((t, i) => (
               <motion.div
                 key={i}
